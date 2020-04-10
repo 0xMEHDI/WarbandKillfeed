@@ -8,7 +8,7 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.GauntletUI.Widgets.Mission.KillFeed;
 using TaleWorlds.MountAndBlade.ViewModelCollection.HUD.KillFeed;
 
-namespace WarbandKillFeed
+namespace WarbandKillfeed
 {
 	[HarmonyPatch(typeof(SPKillFeedVM), "OnAgentRemoved")]
 	internal class KillFeedPatch
