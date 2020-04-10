@@ -21,7 +21,7 @@ namespace WarbandKillfeed
 			isUnconscious = affectedAgent.State == AgentState.Unconscious ? true : false;
 
 			if (affectedAgent.Team != null)
-				isAlly = affectedAgent.Team.IsPlayerAlly;
+				isAlly = (affectedAgent.Team.IsPlayerAlly && !affectedAgent.Team.IsPlayerTeam);
 
 			return true;
 		}

@@ -28,7 +28,7 @@ namespace WarbandKillfeed
 
             if (!isLoaded)
             {
-                InformationManager.DisplayMessage(new InformationMessage("Loaded Warband Kill Feed", Color.FromUint(4281584691)));
+                InformationManager.DisplayMessage(new InformationMessage("Loaded Warband Killfeed", Color.FromUint(4281584691)));
                 isLoaded = true;
             }
         }
