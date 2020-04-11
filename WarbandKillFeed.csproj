@@ -166,7 +166,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KillFeedPatcher.cs" />
+    <Compile Include="Patches\EnemyColorPatch.cs" />
+    <Compile Include="Patches\StayTimePatch.cs" />
+    <Compile Include="Patches\FriendlyColorPatch.cs" />
+    <Compile Include="Patches\OnAgentRemovedPatch.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

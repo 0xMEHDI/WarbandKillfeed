@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
+using TaleWorlds.MountAndBlade.GauntletUI.Widgets.Mission.KillFeed;
 
 namespace WarbandKillfeed
 {
@@ -18,7 +19,7 @@ namespace WarbandKillfeed
         {
             base.OnSubModuleLoad();
 
-            Harmony harmony = new Harmony("improvedlogs.killfeed.patch");
+            Harmony harmony = new Harmony("mehdi.warbandkillfeed.patch");
             harmony.PatchAll();
         }
 
