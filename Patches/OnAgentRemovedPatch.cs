@@ -8,15 +8,13 @@ namespace WarbandKillfeed
 	[HarmonyPatch(typeof(SPKillFeedVM), "OnAgentRemoved")]
 	internal class OnAgentRemovedPatch
 	{
-		public static bool isUnconscious;
-		public static bool isAlly;
+		public static Agent affector;
+		public static Agent affected;
 
-		public static bool Prefix(ref Agent affectedAgent)
+		public static bool Prefix(ref Agent affectorAgent, ref Agent affectedAgent)
 		{
-			isUnconscious = affectedAgent.State == AgentState.Unconscious ? true : false;
-
-			if (affectedAgent.Team != null)
-				isAlly = (affectedAgent.Team.IsPlayerAlly && !affectedAgent.Team.IsPlayerTeam);
+			affector = affectorAgent;
+			affected = affectedAgent;
 
 			return true;
 		}
