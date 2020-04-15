@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.ViewModelCollection.HUD.KillFeed;
 
@@ -13,6 +12,9 @@ namespace WarbandKillfeed
 
 		public static bool Prefix(ref Agent affectorAgent, ref Agent affectedAgent)
 		{
+			if (affectorAgent == null || affectedAgent == null)
+				return true;
+
 			affector = affectorAgent;
 			affected = affectedAgent;
 

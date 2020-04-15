@@ -172,11 +172,8 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="Patches\EnemyColorPatch.cs" />
-    <Compile Include="Patches\FadeInTimePatch.cs" />
-    <Compile Include="Patches\FadeOutTimePatch.cs" />
     <Compile Include="Patches\FriendlyColorPatch.cs" />
     <Compile Include="Patches\OnAgentRemovedPatch.cs" />
-    <Compile Include="Patches\StayTimePatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

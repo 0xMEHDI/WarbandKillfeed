@@ -31,7 +31,7 @@ namespace WarbandKillfeed
         public static readonly Color GREEN = new Color(0.2f, 0.6f, 0.2f);
         public static readonly Color RED = new Color(0.8f, 0f, 0f);
         public static readonly Color ORANGE = new Color(1f, 0.6f, 0f);
-        public static readonly Color GOODPURPLE = new Color(0.4f, 0f, 0.8f);
-        public static readonly Color BADPURPLE = new Color(0.4f, 0f, 0.2f);
+        public static readonly Color GOODPURPLE = new Color(0.4f, 0f, 1f);
+        public static readonly Color BADPURPLE = new Color(0.6f, 0f, 0.2f);
     }
 }

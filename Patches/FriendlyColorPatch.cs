@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.MountAndBlade.ViewModelCollection.HUD.KillFeed;
@@ -13,6 +12,13 @@ namespace WarbandKillfeed
 		{
 			Agent affector = OnAgentRemovedPatch.affector;
 			Agent affected = OnAgentRemovedPatch.affected;
+			Agent main = Agent.Main;
+
+			if (Mission.Current == null || affector == null || affected == null)
+			{
+				__result = Color.Black;
+				return false;
+			}
 
 			if (Mission.Current.IsFieldBattle)
 			{
@@ -22,8 +28,13 @@ namespace WarbandKillfeed
 					__result = Main.GOODPURPLE;
 			}
 
+			else if (main != null)
+			{
+				__result = !affector.IsEnemyOf(main) ? Main.GREEN : (!affected.IsEnemyOf(main) ? Main.RED : Main.BADPURPLE);
+			}
+
 			else
-				__result = !affector.IsEnemyOf(Agent.Main) ? Main.GREEN : (!affected.IsEnemyOf(Agent.Main) ? Main.RED : Main.BADPURPLE);
+				__result = Color.Black;				
 
 			return false;
 		}
